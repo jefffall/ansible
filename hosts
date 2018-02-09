@@ -1,0 +1,8 @@
+# This file goes into /etc/ansible/hosts
+
+[dal]
+host1.dallas.com
+host2.dallas.com
+host3.dallas.com
+# Get the idea?
+# add your hosts for ansible to process here

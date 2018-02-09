@@ -1,0 +1,11 @@
+
+To fix keyboard-auth problem
+ change:
+before: 
+b"-o", b"PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey"
+after:
+b"-o", b"PreferredAuthentications=gssapi-with-mic,gssapi-keyex,hostbased,publickey,keyboard-interactive"
+
+in this file:
+
+/Library/Python/2.7/site-packages/ansible/plugins/connection/ssh.py

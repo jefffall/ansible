@@ -1,0 +1,15 @@
+# on MacOS make sure xcode is installed from the Apps store
+# on linux
+# apt-get install gcc gcc-c++
+# yum install -y gcc gcc-c+
+
+# Now compile nad install sshpass
+
+#Install sshpass to allow su to root with ansible.
+gunzip sshpass-1.06.tar.gz 
+tar -xf sshpass-1.06.tar
+
+cd sshpass-1.06
+./configure
+make
+make install

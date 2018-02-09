@@ -1,0 +1,7 @@
+---
+- hosts: dal 
+  remote_user: ubuntu
+  tasks:
+  - set_fact: 
+     ansible_ssh_pass=your_password
+  - ping:

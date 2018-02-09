@@ -1,0 +1,12 @@
+---
+- hosts: dal
+  remote_user: root
+  tasks:
+  - set_fact:
+      ansible_ssh_user=root
+      ansible_ssh_pass=the_password_goes_here
+  - name: "Get MacOS version numbers"
+#    action: shell system_profiler SPSoftwareDataType | grep 'System Version'
+    action: shell sw_vers -productVersion 
+    register: output
+  - debug: msg="{{ output.stdout }}"
